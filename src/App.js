@@ -21,7 +21,9 @@ const [mode,setmode]=useState('light');
 // const [tgbgmode,settgbgmode]=useState('dark');
 
 const [alert,setalert]=useState(null);
-  const showAlert=(message,type)=>{
+ 
+
+const showAlert=(message,type)=>{
     setalert({msg:message,type:type})
 
     setTimeout(()=>{
@@ -65,7 +67,7 @@ else{
   <>
   <Navbar Mode={mode} toggle={tgmode} />
   <Alert alert={alert}/>
-  <TextForm/>
+  <TextForm heading="Enter the text to analyse" Mode={mode} showalert={showAlert}/>
   {/* <Router> */}
 {/* <Navbar title="Text Utils" aboutus="About Textutils"/> */}
     {/* 
